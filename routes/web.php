@@ -14,26 +14,28 @@
 //全データの表示
 Route::get('/admins', 'AdminsController@index');
 //商品を追加したい
-
+Route::post('/admins', 'AdminsController@create');
+//商品を更新したい
+Route::patch('/admins/{id}', 'AdminsController@update');
 //商品を削除したい
+Route::delete('/admins/{id}', 'AdminsController@destroy');
 
 
-
+//トップページ表示
+Route::get('/', 'ItemsController@top');
 
 //商品一覧
-//全データの表示(消費者が見るページなので最終的にはここは消す?)
-Route::get('/items', 'ItemsController@index');
-//商品一覧からall_rounderだけ引っ張ってきたい。
-Route::get('/items/all_rounder', 'ItemsController@all_rounder');
-//商品一覧からserve_and_volleyだけ引っ張ってきたい。
-Route::get('/items/serve_and_volley', 'ItemsController@serve_and_volley');
-//商品一覧からbaselinerだけ引っ張ってきたい。
-Route::get('/items/baseliner', 'ItemsController@baseliner');
+//各カテゴリーデータの表示。ハテナをつけると変数が入っている場合と空の場合の２つ場合を表現できる
+Route::get('/items/{category?}', 'ItemsController@index');
 
 
 //カート
 Route::get('/carts', 'CartsController@index');
-Route::delete('/cart/{id}', 'CartsController@destroy');
+Route::post('/carts/buy', 'CartsController@buy');
+Route::post('/carts/{id}', 'CartsController@create');
+Route::delete('/carts/{id}', 'CartsController@destroy');
+Route::patch('/carts/{id}', 'CartsController@update');
+
 
 
 //購入完了

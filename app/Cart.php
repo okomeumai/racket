@@ -4,9 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Cart extends Model
-{
+class Cart extends Model {
   public function item() {
     return $this->belongsTo('App\Item');
-  }
-}
+  } // public function item閉じ
+} // Cart閉じ

@@ -8,14 +8,19 @@ use App\Stock;
 use DB;
 
 class CartsController extends Controller {
+  // 一覧情報の表示
   public function index() {
+    // Cartモデルを全て変数$cartsへ代入
     $carts = Cart::all();
+
+    // 変数itemsに渡ってきているかddを使ってチェック
     //dd($cart);
 
     // 合計金額の設定
     $priceSum = $this->getPriceSum($carts);
+    // $cartsをcartsに代入して、viewのcartsのindex.blade.php内にて$cartsとして用いることができる。
     return view('carts.index', ['carts' => $carts, 'priceSum' => $priceSum]);
-  } //public function index閉じ
+  } // public function index閉じ
 
   // 商品をカートに入れる
   public function create(Request $request, $id) {
@@ -33,18 +38,18 @@ class CartsController extends Controller {
     } else {
       // 数量を+1に更新する
       Cart::where('item_id', $id)->update(['amount' => ($records[0]->amount + 1)]);
-    } //if終了
+    } // if終了
     return redirect('/items')->with('flash_message', '商品をカートに入れました。');
-  }//public function create閉じ
+  } // public function create閉じ
 
   // 合計金額の取得
   private function getPriceSum($carts) {
     $priceSum = 0;
     foreach($carts as $cart) {
       $priceSum += $cart->item->price * $cart->amount;
-    } //foreach終了
+    } // foreach終了
     return $priceSum;
-  } //private function getPriceSum閉じ
+  } // private function getPriceSum閉じ
 
   // 商品数量の変更
   public function update(Request $request, $id) {
@@ -52,9 +57,9 @@ class CartsController extends Controller {
       Cart::where('id', $id)->update(['amount' => (int)$request->amount]);
     } catch( \Exception $e ) {
       return redirect('/carts')->with('flash_message', 'データ更新に失敗しました。');
-    } //trycatch終了
+    } // trycatch終了
     return redirect('/carts')->with('flash_message', '商品数量を変更しました。');
-  } //public function update閉じ
+  } // public function update閉じ
 
   // 購入完了の表示
   public function buy() {
@@ -70,17 +75,17 @@ class CartsController extends Controller {
         Stock::where('item_id', $cart->item_id)->update(['stock' => ($stock[0]->stock - $cart->amount)]);
         // カート情報の削除
         Cart::where('item_id', $cart->item_id)->delete();
-      } //foreach終了
+      } // foreach終了
       // コミット
       DB::commit();
 
-      } catch( \Exception $e ) {
-        DB::rollBack();
-        return redirect('/cart')->with('flash_message', 'データ削除に失敗しました。');
-      } //trycatch終了
+    } catch( \Exception $e ) {
+      DB::rollBack();
+      return redirect('/cart')->with('flash_message', 'データ削除に失敗しました。');
+    } // trycatch終了
 
     // 合計金額の設定
     $priceSum = $this->getPriceSum($carts);
     return view('finish', ['carts' => $carts, 'priceSum' => $priceSum]);
-  } //public function buy閉じ
-} //CartsController閉じ
+  } // public function buy閉じ
+} // CartsController閉じ

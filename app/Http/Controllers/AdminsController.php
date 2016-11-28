@@ -9,7 +9,7 @@ use App\Stock;
 use DB;
 
 class AdminsController extends Controller {
-  //一覧情報の表示 関数index
+  //一覧情報の表示
   public function index() {
     //Itemモデルを全て変数$itemsへ代入
     $items = Item::all();
@@ -19,7 +19,7 @@ class AdminsController extends Controller {
 
     //$itemsを'items'に入れるイメージ。そのitemsをadmins/index内で変数$itemsとして使える。
     return view('admins.index')->with('items', $items);
-  }
+  } //public function index閉じ
 
   // 商品の追加
   public function create(Request $request) {
@@ -64,8 +64,7 @@ class AdminsController extends Controller {
     }
 
       return redirect('/admins')->with('flash_message', '商品を追加しました。');
-  }
-
+  } //public function create閉じ
 
   // 商品の更新
   public function update(Request $request, $id) {
@@ -79,13 +78,13 @@ class AdminsController extends Controller {
       return redirect('/admins')->with('flash_message', 'データ更新に失敗しました。');
     }
       return redirect('/admins')->with('flash_message', '在庫数を更新しました。');
-    } //public function update閉じ
+  } //public function update閉じ
 
   // 商品の削除
   public function destroy($id) {
     $item = Item::findOrFail($id);
     $item->delete();
     return redirect('/admins')->with('flash_message', 'Item Deleted!');
-   } //public function destroy閉じ
+  } //public function destroy閉じ
 
-}
+} //AdminsController閉じ

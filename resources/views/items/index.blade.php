@@ -1,7 +1,18 @@
 <!--ここはユーザーが見る商品一覧です-->
-@extends('layouts.default')
+@extends('layouts.items')
 
 @section('title', '商品一覧')
+
+@section('header')
+
+<section>
+  <div class="header_image">
+    <img src="/images/logo.png" height="50">
+  </div><!--header_image閉じ-->
+  </div>
+</section>
+
+@endsection
 
 @section('content')
 

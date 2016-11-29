@@ -9,8 +9,7 @@
 <body>
   <header>
     <div class="header-box">
-      <a href="{{ url('/') }}">
-      </a>
+      <a href="{{ url('/') }}"></a>
       <a href="{{ url('/cart') }}" class="cart"></a>
     </div>
   </header>

@@ -8,7 +8,7 @@
 <body>
   <div id="container">
     <header>
-      <img src="/images/title.png">
+      <a href="/"><img src="/images/title.png"></a>
       <p>〜プレイスタイル別テニスラケットSHOP〜</p>
     </header>
     <div class="top_image">
@@ -16,13 +16,13 @@
     </div><!--top_image閉じ-->
     <div>
     </div>
-    <div>
+    <div class="text_all_rounder">
       <a href="/items/all_rounder"><img src="/images/for_all_rounder.png"></a>
     </div>
-    <div>
+    <div class="text_serve_and_volley">
       <a href="/items/serve_and_volley"><img src="/images/for_serve_and_volley.png"></a>
     </div>
-    <div>
+    <div class="text_baseliner">
       <a href="/items/baseliner"><img src="/images/for_baseliner.png"></a>
     </div>
   </div><!--container閉じ-->

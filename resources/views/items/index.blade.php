@@ -5,11 +5,10 @@
 
 @section('header')
 
-<section>
+<section >
   <div class="header_image">
-    <img src="/images/logo.png" height="50">
+    <a href="/"><img src="/images/title.png"></a>
   </div><!--header_image閉じ-->
-  </div>
 </section>
 
 @endsection

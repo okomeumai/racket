@@ -31,7 +31,7 @@
             <span>合計</span>
             <span>¥{{ $priceSum }} </span>
             <span>お買い上げありがとうございました。</span>
-            <a href=""><img src="/images/continue_shopping.png"></a>
+            <a href="/"><img src="/images/go_to_top.png"></a>
         </div>
   </div><!--container閉じ-->
 </body>

@@ -17,13 +17,13 @@
     <div>
     </div>
     <div class="text_all_rounder">
-      <a href="/items/all_rounder"><img src="/images/for_all_rounder.png"></a>
+      <a href="/items/all_rounder"><p>オールラウンダー向け</p></a>
     </div>
     <div class="text_serve_and_volley">
-      <a href="/items/serve_and_volley"><img src="/images/for_serve_and_volley.png"></a>
+      <a href="/items/serve_and_volley"><p>サーブ＆ボレーヤー向け</p></a>
     </div>
     <div class="text_baseliner">
-      <a href="/items/baseliner"><img src="/images/for_baseliner.png"></a>
+      <a href="/items/baseliner"><p>ベースライナー向け</p></a>
     </div>
   </div><!--container閉じ-->
 </body>

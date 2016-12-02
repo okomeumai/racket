@@ -1,0 +1,30 @@
+/*外側の空白を削除*/
+* { margin: 0; padding: 0; }
+#container {
+  width: 1366px;
+  height: 768px;
+  margin: 0 auto;
+}
+header {
+  width: 1366px;
+  height: 74px;
+}
+header a {
+  float: left;
+  width: 440px;
+  height: 74px;
+  margin: 0 0 0 20px;
+}
+header a img {
+  float: left;
+  width: 440px;
+  height: 74px;
+}
+header p {
+  float: left;
+  width: 322px;
+  height: 30px;
+  margin: 32px 0 10px 25px;
+  color: #108710;
+  font-weight: bold;
+}

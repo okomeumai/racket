@@ -1,0 +1,76 @@
+/*外側の空白を削除*/
+* { margin: 0; padding: 0; }
+#container {
+  width: 1366px;
+  height: 768px;
+  margin: 0 auto;
+}
+header {
+  width: 1366px;
+  height: 74px;
+}
+header a {
+  float: left;
+  width: 440px;
+  height: 74px;
+  margin: 0 0 0 20px;
+}
+header a img {
+  float: left;
+  width: 440px;
+  height: 74px;
+}
+header p {
+  float: left;
+  width: 322px;
+  height: 30px;
+  margin: 32px 0 10px 25px;
+  color: #108710;
+  font-weight: bold;
+}
+.text_finished {
+  width: 1366px;
+  height:50px;
+  text-align: center;
+}
+.text_finished p {
+  color: red;
+}
+.items_finished {
+  width: 683px;
+  height: 130px;
+  float: left;
+  margin: 0 0 30px 0;
+}
+.items_finished img {
+  height: 130px;
+  float: left;
+  margin: 0 15px 0 250px;
+}
+.items_finished .items_name {
+  margin: 15px 0 0 5px;
+}
+.items_finished .items_price {
+  margin: 15px 0 0 5px;
+}
+.items_finished .items_amount {
+  margin: 15px 0 0 5px;
+}
+.sum {
+  float: left;
+  width: 1366px;
+  text-align: center;
+}
+.sum span {
+  color: red;
+}
+.sum .priceSum {
+  margin: 5px 0;
+}
+.sum .text_thanks {
+  margin: 5px 0;
+}
+.sum a {
+  width: 430px;
+  height: 47px;
+}

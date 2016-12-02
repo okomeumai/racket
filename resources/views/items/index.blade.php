@@ -1,47 +1,47 @@
 <!--ここはユーザーが見る商品一覧です-->
-@extends('layouts.items')
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  @foreach ($items as $item)
+    <title>{{ $item->category }}向け商品一覧</title>
+  @endforeach
+  <link rel="stylesheet" href="/css/items.css">
+</head>
+<body>
+  <div id="container">
+    <header>
+      <a href="/"><img src="/images/title.png"></a>
+      <p>〜プレイスタイル別テニスラケットSHOP〜</p>
+    </header>
 
-@section('title', '商品一覧')
-
-@section('header')
-
-<section >
-  <div class="header_image">
-    <a href="/"><img src="/images/title.png"></a>
-  </div><!--header_image閉じ-->
-</section>
-
-@endsection
-
-@section('content')
-
-<section>
   <a href="/carts">カートの中身を見る</a>
-  <h1>商品一覧</h1>
-  <table>
-    <tr>
-      <th>商品名</th>
-      <th>価格</th>
-      <th>商品画像</th>
-      <th>カテゴリー</th>
-    </tr>
 
-  <!--この１文はどこのitemをitemsとしforeachしているの？以下はItem::all();のforeach分-->
-    @foreach ($items as $item)
-    <tr>
-      <td>{{ $item->name }}</td>
-      <td>{{ $item->price }} 円</td>
-      <td><img src="/itemimages/{{ $item->img }}" height="50"></td>
-      <td>{{ $item->category }}</td>
+    <!--各カテゴリー向け一覧-->
+    <div>
+      <h1>{{ $item->category }}向け商品一覧</h1>
+    </div>
+
+    <!--各カテゴリー別説明文掲載-->
+    <div class="text_category">
+      
+    </div>
+
+    <!--商品列挙-->
+    @foreach($items as $item)
+      <div class="items_detail">
+        <img src="/itemimages/{{ $item->img }}" height="130">
+        <p class="items_name">商品名：{{ $item->name }}</p>
+        <p class="items_price">価格：{{ $item->price }}円</p>
+        <p class="items_amount">数量：{{ $item->amount }}</p>
+      </div> <!--items_detail閉じ-->
 
       <!--「カートに入れるボタン」実装-->
-      <td><form action="{{ action('CartsController@create', $item->id) }}" id="form_{{ $item->id }}" method="post" style="display:inline">
+      <form action="{{ action('CartsController@create', $item->id) }}" id="form_{{ $item->id }}" method="post" style="display:inline">
         {{ csrf_field() }}
         <input type="submit" class="fs12" value="カートに入れる">
-      </form></td>
-    </tr>
+      </form>
     @endforeach
-
-</section>
-
-@endsection
+  </div> <!--container閉じ-->
+</body>
+</html>

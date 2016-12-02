@@ -1,6 +1,10 @@
 /*外側の空白を削除*/
 * { margin: 0; padding: 0; }
-
+#container {
+  width: 1366px;
+  height: 768px;
+  margin: 0 auto;
+}
 header {
   width: 1366px;
   height: 74px;
@@ -23,11 +27,6 @@ header p {
   margin: 32px 0 10px 25px;
   color: #108710;
   font-weight: bold;
-}
-#container {
-  width: 1366px;
-  height: 768px;
-  margin: 0 auto;
 }
 .top_image img {
   width: 1366px;

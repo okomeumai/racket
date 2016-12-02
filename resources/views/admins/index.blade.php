@@ -13,9 +13,9 @@
   <p>商品画像：<input type="file" name="img"></p>
   <p>カテゴリー：
     <select name="category">
-      <option value="all_rounder">オールラウンダー</option>
-      <option value="serve_and_volley">サーブ＆ボレー</option>
-      <option value="baseliner">ベースライナー</option>
+      <option value="オールラウンダー">オールラウンダー</option>
+      <option value="サーブ＆ボレーヤー">サーブ＆ボレーヤー</option>
+      <option value="ベースライナー">ベースライナー</option>
     </select>
   </p>
   <p><input type="submit" value="商品を登録する"></p>
@@ -33,7 +33,6 @@
         <th>カテゴリー</th>
         <th>操作</th>
       </tr>
-    <!--この１文はどこのitemをitemsとしforeachしているの？-->
     @foreach ($items as $item)
       <tr>
         <td>{{ $item->name }}</td>

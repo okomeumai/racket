@@ -32,7 +32,7 @@ Route::get('/items/{category?}', 'ItemsController@index');
 //カート
 Route::get('/carts', 'CartsController@index');
 Route::post('/carts/buy', 'CartsController@buy');
-Route::post('/carts/{id}', 'CartsController@create');
+Route::post('/carts/{category}/{id}', 'CartsController@create');
 Route::delete('/carts/{id}', 'CartsController@destroy');
 Route::patch('/carts/{id}', 'CartsController@update');
 

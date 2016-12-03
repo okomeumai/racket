@@ -24,7 +24,7 @@
 
     <!--各カテゴリー別説明文掲載-->
     <div class="text_category">
-      
+
     </div>
 
     <!--商品列挙-->
@@ -37,7 +37,7 @@
       </div> <!--items_detail閉じ-->
 
       <!--「カートに入れるボタン」実装-->
-      <form action="{{ action('CartsController@create', $item->id) }}" id="form_{{ $item->id }}" method="post" style="display:inline">
+      <form action="{{ action('CartsController@create',[$category, $item->id]) }}" id="form_{{ $item->id }}" method="post" style="display:inline">
         {{ csrf_field() }}
         <input type="submit" class="fs12" value="カートに入れる">
       </form>

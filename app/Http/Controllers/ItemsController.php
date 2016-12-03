@@ -20,6 +20,6 @@ class ItemsController extends Controller {
       $items = Item::where('category', $category)->get();
     }
     //dd($category);
-    return view('items.index')->with('items', $items);
+    return view('items.index', ['items' => $items, 'category' => $category]);
   } // public function index閉じ
 } // ItemsController閉じ

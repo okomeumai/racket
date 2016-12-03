@@ -23,7 +23,7 @@ class CartsController extends Controller {
   } // public function index閉じ
 
   // 商品をカートに入れる
-  public function create(Request $request, $id) {
+  public function create(Request $request, $category, $id) {
     $records = Cart::where('item_id', $id)->get();
 
     // 対象商品が存在しない場合はレコードを新規追加、存在している場合は数量を+1に更新する。
@@ -39,7 +39,7 @@ class CartsController extends Controller {
       // 数量を+1に更新する
       Cart::where('item_id', $id)->update(['amount' => ($records[0]->amount + 1)]);
     } // if終了
-    return redirect('/items')->with('flash_message', '商品をカートに入れました。');
+    return redirect('/items/'.$category)->with('flash_message', '商品をカートに入れました。');
   } // public function create閉じ
 
   // 合計金額の取得

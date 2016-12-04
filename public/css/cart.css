@@ -41,11 +41,15 @@ header .buy a {
   color: white;
 }
 header .buy p {
-margin: 5px 0 0 27px;
-font-size: 27px;
+  margin: 5px 0 0 27px;
+  font-size: 27px;
 }
 .text_cart {
   margin: 0 0 0 203px;
+}
+.buy-sum-box .buy-sum-title, .buy-sum-price {
+  color: red;
+  font-size: 30px;
 }
 .nav {
   width: 203px;

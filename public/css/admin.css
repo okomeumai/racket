@@ -1,0 +1,50 @@
+.registration h1 {
+  margin: 0 0 0 200px;
+}
+.registration .input_list {
+  margin: 0 600px 0 400px;
+}
+.item_name {
+  width: 250px;
+  height: 25px;
+  margin: 0 0 10px 0;
+}
+.item_price {
+  width: 40px;
+  height: 25px;
+  margin: 0 0 10px 0;
+}
+.item_amount {
+  width: 30px;
+  height: 25px;
+  margin: 0 0 10px 0;
+}
+.item_image {
+  margin: 0 0 10px 0;
+}
+.category {
+  margin: 0 0 20px 0;
+}
+.item_registration {
+  margin: 0 0 40px 0;
+}
+.all_list h1 {
+  margin: 0 0 0 142px;
+}
+.all_list {
+  margin: 0 62px;
+}
+.all_list .list_name {
+  margin: 0 0 0 200px;
+}
+.all_list .list {
+  width: 1300px;
+  text-align: center;
+}
+.stock_amount {
+  width: 30px;
+  height: 25px;
+}
+table, th, td {
+  border: 2px #808080 solid;
+}

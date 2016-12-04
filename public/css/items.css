@@ -44,7 +44,6 @@ header .watchCart p {
   margin: 5px 0 0 27px;
   font-size: 27px;
 }
-
 .text_category {
   margin: 0 0 0 203px;
 }
@@ -73,7 +72,6 @@ header .watchCart p {
   height: 200px;
   float: left;
   margin: 1px;
-  line-height: 50px;
 }
 .items_detail:hover {
   border: 5px solid #59b1eb;
@@ -81,7 +79,24 @@ header .watchCart p {
 }
 .items_detail img {
   float: left;
+  height: 130px;
   margin: 15px 0 0 0;
+}
+.items_detail .items_name {
+  float: left;
+  width: 178px;
+  height: 95px;
+}
+.items_detail .items_price {
+  float: left;
+  width: 178px;
+  height: 20px;
+  color: red;
+}
+.items_detail .items_amount {
+  float: left;
+  width: 178px;
+  height: 20px;
 }
 .items_detail button {
   clear: both;

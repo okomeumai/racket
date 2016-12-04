@@ -25,10 +25,6 @@
       <h1>{{ $item->category }}向け商品一覧</h1>
     </div>
 
-    <!--各カテゴリー別説明文掲載-->
-    <div>
-    </div>
-
     <!--左サイドのカテゴリー-->
     <nav>
       <div class="nav">
@@ -46,17 +42,23 @@
     <!--商品列挙-->
     @foreach($items as $item)
       <div class="items_detail">
-        <img src="/itemimages/{{ $item->img }}" height="130">
-        <p class="items_name">商品名：{{ $item->name }}</p>
-        <p class="items_price">価格：{{ $item->price }}円</p>
-        <!--カートの商品数量入力-->
-        <p class="items_amount">数量：
-          <select name="items_amount">
-            <option value="">１</option><option value="2">２</option><option value="3">３</option><option value="4">４</option><option value="5">５</option>
-            <option value="6">６</option><option value="7">７</option><option value="8">８</option><option value="9">９</option><option value="10">１０</option>
-          </select>
-        </p>
+        <img src="/itemimages/{{ $item->img }}">
+        <div class="items_name">
+          商品名：</br>{{ $item->name }}
+        </div>
+        <div class="items_price">
+          価格：{{ $item->price }}円
+        </div>
 
+        <!--カートの商品数量入力-->
+        <div class="items_amount">
+          <p>数量：
+            <select name="items_amount">
+              <option value="">１</option><option value="2">２</option><option value="3">３</option><option value="4">４</option><option value="5">５</option>
+              <option value="6">６</option><option value="7">７</option><option value="8">８</option><option value="9">９</option><option value="10">１０</option>
+            </select>
+          </p>
+        </div>
 
       <!--「カートに入れるボタン」実装-->
       <form action="{{ action('CartsController@create',[$category, $item->id]) }}" id="form_{{ $item->id }}" method="post" style="display:inline">

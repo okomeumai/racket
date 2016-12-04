@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Item;
 use App\Cart;
 use App\Stock;
 use DB;
@@ -88,4 +89,12 @@ class CartsController extends Controller {
     $priceSum = $this->getPriceSum($carts);
     return view('finish', ['carts' => $carts, 'priceSum' => $priceSum]);
   } // public function buy閉じ
+
+  // 商品の削除
+  public function destroy($id) {
+    $item = Cart::findOrFail($id);
+    $item->delete();
+    return redirect('/carts')->with('flash_message', 'Item Deleted!');
+  } //public function destroy閉じ
+
 } // CartsController閉じ

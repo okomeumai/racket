@@ -26,6 +26,17 @@
       <h1>ショッピングカート</h1>
     </div>
 
+    <div class="buy-sum-box">
+      <span class="buy-sum-title">合計</span>
+      <span class="buy-sum-price">{{ $priceSum }}円</span>
+      @if ( $priceSum )
+      <form action="{{ url('/carts/buy') }}" method="post">
+        {{ csrf_field() }}
+        <input class="buy-btn" type="submit" value="購入する">
+      </form>
+      @endif
+    </div> <!--buy-sum-box閉じ-->
+
     <!--左サイドのカテゴリー-->
     <nav>
       <div class="nav">
@@ -45,28 +56,22 @@
         <img src="/{{ \Config::get('const.ITEM_IMG_PATH') }}/{{ $cart->item->img }}">
         <p>商品名：{{ $cart->item->name }} </p>
         <p>価格：{{ $cart->item->price }}円 </p>
-        <form  action="{{ url('/cart', $cart->id) }}" method="post">
+
+        <!--カートの商品数量変更-->
+        <form  method="post" action="{{ url('/carts', $cart->id) }}">
           {{ csrf_field() }}
           {{ method_field('patch') }}
-          <input type="number" type="text" name="amount" value={{ $cart->amount }}>個&nbsp;&nbsp;<input type="submit" value="変更する">
+          <input type="text" name="amount" value={{ $cart->amount }}>個&nbsp;&nbsp;<input type="submit" value="変更する">
         </form>
-        <form action="{{ url('/cart', $cart->id) }}"  method="post">
+
+        <!--カートの商品削除-->
+        <form method="post" action="{{ url('/carts', $cart->id) }}">
           {{ csrf_field() }}
           {{ method_field('delete') }}
-          <input type="submit" value="削除">
+          <input type="submit" value="取り消し">
         </form>
       </div> <!--item_of_cart閉じ-->
     @endforeach
-    <div class="buy-sum-box">
-      <span class="buy-sum-title">合計</span>
-      <span class="buy-sum-price">{{ $priceSum }}円</span>
-      @if ( $priceSum )
-      <form action="{{ url('/carts/buy') }}" method="post">
-        {{ csrf_field() }}
-        <input class="buy-btn" type="submit" value="購入する">
-      </form>
-      @endif
-    </div> <!--buy-sum-box閉じ-->
-</div> <!--container閉じ-->
+  </div> <!--container閉じ-->
 </body>
 </html>

@@ -49,12 +49,15 @@
         <img src="/itemimages/{{ $item->img }}" height="130">
         <p class="items_name">商品名：{{ $item->name }}</p>
         <p class="items_price">価格：{{ $item->price }}円</p>
+        <!--カートの商品数量入力-->
         <p class="items_amount">数量：
           <select name="items_amount">
             <option value="">１</option><option value="2">２</option><option value="3">３</option><option value="4">４</option><option value="5">５</option>
             <option value="6">６</option><option value="7">７</option><option value="8">８</option><option value="9">９</option><option value="10">１０</option>
           </select>
         </p>
+
+
       <!--「カートに入れるボタン」実装-->
       <form action="{{ action('CartsController@create',[$category, $item->id]) }}" id="form_{{ $item->id }}" method="post" style="display:inline">
         {{ csrf_field() }}

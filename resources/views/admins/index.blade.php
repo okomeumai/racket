@@ -10,6 +10,11 @@
   <!--商品の登録-->
   <div class="registration">
     <h1>商品の登録</h1>
+    <!--フラッシュメッセージの表示-->
+    @if (session('flash_message') )
+      <div class="flash_message">{{session('flash_message')}}</div>
+    @endif
+
     <div class="input_list">
       <form method="post" action="{{ url('/admins') }}" enctype="multipart/form-data">
         {{ csrf_field() }}
@@ -54,7 +59,7 @@
         </td>
 
         <!--画像の大きさ指定。heightだけでwidthは合わしてくれる。-->
-        <td><img src="/itemimages/{{ $item->img }}" height="50"></td>
+        <td><img src="/itemimages/{{ $item->img }}"></td>
         <td>{{ $item->category }}</td>
 
         <!--削除ボタン実装-->

@@ -94,7 +94,7 @@ class CartsController extends Controller {
   public function destroy($id) {
     $item = Cart::findOrFail($id);
     $item->delete();
-    return redirect('/carts')->with('flash_message', 'Item Deleted!');
+    return redirect('/carts')->with('flash_message', '商品を取り消しました。');
   } //public function destroy閉じ
 
 } // CartsController閉じ

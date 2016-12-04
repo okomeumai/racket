@@ -1,5 +1,15 @@
 .registration h1 {
+  display: inline-block;
+  width: 193px;
   margin: 0 0 0 200px;
+}
+.flash_message {
+  display: inline-block;
+  width: 500px;
+  height: 55px;
+  margin: 9px 0 0 6px;
+  color: red;
+  font-size: 20px;
 }
 .registration .input_list {
   margin: 0 600px 0 400px;
@@ -40,6 +50,9 @@
 .all_list .list {
   width: 1300px;
   text-align: center;
+}
+.all_list .list img {
+  height: 70px;
 }
 .stock_amount {
   width: 30px;

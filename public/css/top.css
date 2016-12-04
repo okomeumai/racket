@@ -8,6 +8,7 @@
 header {
   width: 1366px;
   height: 74px;
+  margin: 5px 0;
 }
 header a {
   float: left;

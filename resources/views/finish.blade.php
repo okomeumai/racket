@@ -9,11 +9,30 @@
   <div id="container">
     <header>
       <a href="/"><img src="/images/title.png"></a>
-      <p>〜プレイスタイル別テニスラケットSHOP〜</p>
+      <p class="subtitle">〜プレイスタイル別テニスラケットSHOP〜</p>
+      <div class="go_to_top">
+        <a href="/"><p class="text_go_to_top">トップページへ戻る</p></a>
+      </div>
     </header>
       <div class="text_finished">
-        <p>ご購入完了致しました。</p>
+        <p>お買い上げありがとうございました。ご購入完了致しました。</p>
+        <span>合計</span>
+        <span class="priceSum">¥{{ $priceSum }} </span>
       </div> <!--text_finished閉じ-->
+
+      <!--左サイドのカテゴリー-->
+      <nav>
+        <div class="nav">
+          <div class="nav_ttl">
+            <p>スタイル一覧</p>
+          </div> <!--nav_ttl閉じ-->
+          <ul>
+            <li><a href="/items/オールラウンダー">オールラウンダー</a></li>
+            <li><a href="/items/サーブ＆ボレーヤー">サーブ＆ボレーヤー</a></li>
+            <li><a href="/items/ベースライナー">ベースライナー</a></li>
+          </ul>
+        </div><!--nav閉じ-->
+      </nav>
 
         @foreach($carts as $cart)
           <div class="items_finished">
@@ -24,12 +43,6 @@
           </div> <!--items_finished閉じ-->
         @endforeach
 
-      <div class="sum">
-        <span>合計</span>
-        <p class="priceSum">¥{{ $priceSum }} </p>
-        <p class="text_thanks">お買い上げありがとうございました。</p>
-        <a href="/"><img src="/images/go_to_top.png"></a>
-      </div><!--sum閉じ-->
   </div><!--container閉じ-->
 </body>
 </html>

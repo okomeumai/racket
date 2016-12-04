@@ -8,6 +8,7 @@
 header {
   width: 1366px;
   height: 74px;
+  margin: 5px 0;
 }
 header a {
   float: left;
@@ -20,7 +21,7 @@ header a img {
   width: 440px;
   height: 74px;
 }
-header p {
+header .subtitle {
   float: left;
   width: 322px;
   height: 30px;
@@ -28,16 +29,66 @@ header p {
   color: #108710;
   font-weight: bold;
 }
+header .go_to_top {
+  float: left;
+  margin: 20px 0 0 200px;
+  background-color: #FF9872;
+  width: 300px;
+  height: 50px;
+}
+header .go_to_top a {
+  text-decoration: none;
+}
+header .go_to_top .text_go_to_top {
+  margin: 5px 0 0 9px;
+  font-size: 27px;
+  color: white;
+}
 .text_finished {
   width: 1366px;
-  height:50px;
+  height: 100px;
   text-align: center;
+  font-size: 30px;
 }
 .text_finished p {
   color: red;
+  font-size: 30px;
+}
+.text_finished span {
+  color: red;
+  font-size: 30px;
+}
+.text_finished .priceSum {
+  color: red;
+  font-size: 30px;
+  margin: 5px 0;
+}
+.text_finished a {
+  width: 430px;
+  height: 47px;
+}
+.nav {
+  width: 203px;
+  height: 600px;
+  float: left;
+}
+.nav .nav_ttl {
+  font-weight: bold;
+  margin: 0 0 20px 0;
+}
+.nav ul {
+  list-style:none;
+}
+.nav ul li {
+  margin: 0 0 40px 0;
+}
+.nav ul li a {
+  text-decoration: none;
+  color: #108710;
+  font-weight: bold;
 }
 .items_finished {
-  width: 683px;
+  width: 1000px;
   height: 130px;
   float: left;
   margin: 0 0 30px 0;
@@ -55,22 +106,4 @@ header p {
 }
 .items_finished .items_amount {
   margin: 15px 0 0 5px;
-}
-.sum {
-  float: left;
-  width: 1366px;
-  text-align: center;
-}
-.sum span {
-  color: red;
-}
-.sum .priceSum {
-  margin: 5px 0;
-}
-.sum .text_thanks {
-  margin: 5px 0;
-}
-.sum a {
-  width: 430px;
-  height: 47px;
 }

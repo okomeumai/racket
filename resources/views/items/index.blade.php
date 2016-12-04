@@ -32,9 +32,9 @@
           <p>スタイル一覧</p>
         </div> <!--nav_ttl閉じ-->
         <ul>
-          <li><a href="/items/オールラウンダー" target="_blank">オールラウンダー</a></li>
-          <li><a href="/items/サーブ＆ボレーヤー" target="_blank">サーブ＆ボレーヤー</a></li>
-          <li><a href="/items/ベースライナー" target="_blank">ベースライナー</a></li>
+          <li><a href="/items/オールラウンダー">オールラウンダー</a></li>
+          <li><a href="/items/サーブ＆ボレーヤー">サーブ＆ボレーヤー</a></li>
+          <li><a href="/items/ベースライナー">ベースライナー</a></li>
         </ul>
       </div><!--nav閉じ-->
     </nav>
@@ -48,16 +48,6 @@
         </div>
         <div class="items_price">
           価格：{{ $item->price }}円
-        </div>
-
-        <!--カートの商品数量入力-->
-        <div class="items_amount">
-          <p>数量：
-            <select name="items_amount">
-              <option value="">１</option><option value="2">２</option><option value="3">３</option><option value="4">４</option><option value="5">５</option>
-              <option value="6">６</option><option value="7">７</option><option value="8">８</option><option value="9">９</option><option value="10">１０</option>
-            </select>
-          </p>
         </div>
 
       <!--「カートに入れるボタン」実装-->

@@ -84,7 +84,7 @@ class AdminsController extends Controller {
   public function destroy($id) {
     $item = Item::findOrFail($id);
     $item->delete();
-    return redirect('/admins')->with('flash_message', 'Item Deleted!');
+    return redirect('/admins')->with('flash_message', '商品を削除しました。');
   } //public function destroy閉じ
 
 } //AdminsController閉じ

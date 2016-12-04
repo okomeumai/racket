@@ -8,6 +8,7 @@
 header {
   width: 1366px;
   height: 74px;
+  margin: 5px 0;
 }
 header .img_title a {
   float: left;
@@ -93,13 +94,7 @@ header .watchCart p {
   height: 20px;
   color: red;
 }
-.items_detail .items_amount {
-  float: left;
-  width: 178px;
-  height: 20px;
-}
 .items_detail button {
-  clear: both;
   width: 308px;
   height: 25px;
   background-color: white;

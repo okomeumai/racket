@@ -54,6 +54,11 @@ class CartsController extends Controller {
 
   // 商品数量の変更
   public function update(Request $request, $id) {
+    //パラメータチェック処理
+    $this->validate($request, [
+      'amount'  => 'required|integer',
+    ]);
+
     try {
       Cart::where('id', $id)->update(['amount' => (int)$request->amount]);
     } catch( \Exception $e ) {

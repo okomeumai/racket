@@ -19,7 +19,7 @@
       <form method="post" action="{{ url('/admins') }}" enctype="multipart/form-data">
         {{ csrf_field() }}
         <p>商品名：<input class="item_name" type="text" name="name" placeholder="商品名"  size="50" maxlength="50"></p>
-        <p>価格：<input class="item_price" type="text" name="price" placeholder="価格" size="5" maxlength="5"></p>
+        <p>価格：<input class="item_price" type="text" name="price" placeholder="価格" size="6" maxlength="6"></p>
         <p>個数：<input class="item_amount" type="text" name="stock" placeholder="個数" size="3" maxlength="3"></p>
         <p>商品画像：<input class="item_image" type="file" name="img"></p>
         <p class="category">カテゴリー:

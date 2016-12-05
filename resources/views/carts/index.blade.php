@@ -21,7 +21,7 @@
         @endif
       </div> <!--buy閉じ-->
     </header>
-    
+
     <div class="text_shopping_cart">
       <h1>ショッピングカート</h1>
     </div>

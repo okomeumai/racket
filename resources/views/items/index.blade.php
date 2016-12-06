@@ -25,6 +25,11 @@
       <h1>{{ $item->category }}向け商品一覧</h1>
     </div>
 
+    <!--フラッシュメッセージの表示-->
+    @if (session('flash_message') )
+      <div class="flash_message">{{session('flash_message')}}</div>
+    @endif
+    
     <!--左サイドのカテゴリー-->
     <nav>
       <div class="nav">

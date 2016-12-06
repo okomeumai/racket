@@ -46,7 +46,15 @@ header .watchCart p {
   font-size: 27px;
 }
 .text_category {
+  display: inline-block;
   margin: 0 0 0 203px;
+}
+.flash_message {
+  display: inline-block;
+  width: 500px;
+  margin: 2px 0 0 10px;
+  color: red;
+  font-size: 30px;
 }
 .nav {
   width: 203px;
@@ -74,10 +82,12 @@ header .watchCart p {
   float: left;
   margin: 1px;
 }
+/*
 .items_detail:hover {
   border: 5px solid #59b1eb;
   box-sizing: border-box;
 }
+*/
 .items_detail img {
   float: left;
   height: 130px;
@@ -95,10 +105,13 @@ header .watchCart p {
   color: red;
 }
 .items_detail button {
-  width: 308px;
-  height: 25px;
-  background-color: white;
+  width: 178px;
+  height: 30px;
+  font-size: 100%;
+  color: white;
+  background-color: #00CCFF;
 }
+/*
 .items_detail button:hover {
   background-color: #fff;
   border-color: #FF773E;
@@ -122,3 +135,4 @@ header .watchCart p {
   -webkit-transition: all .3s;
   transition: all .3s;
 }
+*/

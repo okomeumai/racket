@@ -29,32 +29,35 @@ header .img_title p {
   color: #108710;
   font-weight: bold;
 }
+/*
 header .buy {
   float: left;
   margin: 20px 0 0 200px;
   width: 300px;
   height: 50px;
 }
+*/
+.buy {
+  float: left;
+}
 .text_shopping_cart {
+  width: 1322px;
+  height: 45px;
   margin: 0 0 0 203px;
 }
-.buy button {
-  width: 300px;
-  height: 50px;
-  font-size: 27px;
-  background-color: #FF9872;
-  color: white;
+.text_shopping_cart h1 {
+  display: inline-block;
 }
 .flash_message {
   display: inline-block;
-  width: 500px;
+  width: 800px;
   margin: 0 0 0 10px;
   color: red;
   font-size: 30px;
 }
 .buy_sum_box {
   float: left;
-  width: 1306px;
+  width: 835px;
   margin: 0 60px 0 0;
   text-align: right;
 }
@@ -62,10 +65,22 @@ header .buy {
   color: red;
   font-size: 30px;
 }
-.nav {
-  width: 203px;
-  height: 2000px;
+nav {
   float: left;
+  width: 203px;
+  height: 1000px;
+}
+.buy button {
+  width: 1163px;
+  height: 50px;
+  font-size: 27px;
+  background-color: #FF9872;
+  color: white;
+}
+.nav {
+  width: 144px;
+  height: 250px;
+  /*float: left;*/
 }
 .nav .nav_ttl {
   font-weight: bold;
@@ -82,34 +97,56 @@ header .buy {
   color: #108710;
   font-weight: bold;
 }
+.list_title {
+  float: left;
+  width: 1163px;
+  border-bottom: 1px solid
+}
+.list_name {
+  margin: 0 0 0 350px;
+}
+.list_price {
+  margin: 0 0 0 350px;
+}
+.list_amount {
+  margin: 0 0 0 75px;
+}
 .item_of_cart {
   float: left;
-  width: 960px;
+  width: 1163px;
 }
 .item_of_cart img {
   float: left;
   height: 250px;
 }
-.item_of_cart p {
+.item_of_cart .item_name {
   float: left;
-  width: 710px;
-  margin: 40px 0 0 0;
+  width: 300px;
+  margin: 100px 0 0 0;
+  font-size: 25px;
+}
+.item_of_cart .cancel {
+  float: left;
+  margin: 105px 0 0 0;
+}
+.item_of_cart .item_price {
+  float: left;
+  margin: 96px 0 0 100px;
+  color: red;
+  font-size: 30px;
 }
 .item_of_cart .amount_change {
   float: left;
-  width: 710px;
-  height: 70px;
-  margin: 30px 0 0 0;
+  width: 255px;
+  margin: 100px 0 0 22px;
 }
 .item_of_cart .amount_change_text {
   width: 45px;
   height: 30px;
   font-size: 25px;
-  color: red;
   text-align: center;
 }
 .item_of_cart .amount_change_button {
-  width: 150px;
+  width: 55px;
   height: 67px;
-  margin: 0 0 0 50px;
 }

@@ -1,7 +1,16 @@
+.text_admin {
+  width: 1422px;
+  border-bottom: 1px solid black;
+}
+.text_admin h1 {
+  display: inline-block;
+  width: 193px;
+  margin: 10px 0 10px 62px;
+}
 .registration h1 {
   display: inline-block;
   width: 193px;
-  margin: 0 0 0 200px;
+  margin: 10px 0 10px 62px;
 }
 .flash_message {
   display: inline-block;
@@ -12,7 +21,7 @@
   font-size: 20px;
 }
 .registration .input_list {
-  margin: 0 600px 0 400px;
+  margin: 0 0 0 62px;
 }
 .item_name {
   width: 250px;
@@ -39,17 +48,20 @@
   margin: 0 0 40px 0;
 }
 .all_list h1 {
-  margin: 0 0 0 142px;
+  margin: 10px 0 0 62px;
 }
 .all_list {
-  margin: 0 62px;
+  border-top: 1px solid black;
 }
 .all_list .list_name {
   margin: 0 0 0 200px;
 }
 .all_list .list {
   width: 1300px;
+  margin: 0 0 0 62px;
+  border: 0;
   text-align: center;
+  border-collapse: collapse;
 }
 .all_list .list img {
   height: 70px;

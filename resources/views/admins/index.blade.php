@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="/css/admin.css">
 </head>
 <body>
+  <div class="text_admin">
+    <h1>管理ページ</h1>
+  </div>
   <!--商品の登録-->
   <div class="registration">
     <h1>商品の登録</h1>
